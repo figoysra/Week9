@@ -1,6 +1,9 @@
+// Buat program menggunakan callback function untuk melanjutkan dan menampilkan semua bulan
+// menggunakan method map
+
 const getmonth = (callback) =>{
     setTimeout(() => {
-        let error = false // data error
+        let error = false // variable error
         let month = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
         if(!error){ //mengecek apakah error atau tidak
             callback(null,month) // menampilkan null dan bulan 
@@ -8,7 +11,7 @@ const getmonth = (callback) =>{
         else{ // kondisi ketika error
             callback(new Error("Sorry Data Not Found",[]))
         }
-    }, 1000);
+    }, 4000);
 }
 getmonth((param1,param2)=>{
     if (param1== null) { // mengecek parameter 1 == null 

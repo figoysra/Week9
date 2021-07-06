@@ -1,3 +1,5 @@
+// Buatlah 2 program bebas dengan menggunakan promise seperti soal nomor
+
 //program absensi kehadiran 
 const Absensi = (student) =>{
     return new Promise((resolve,reject)=>{
@@ -8,12 +10,12 @@ const Absensi = (student) =>{
                 let checkstudent = dataStudents.filter((e)=>{  // Mengecek inputan apakah ada di data murid
                     return e.toLowerCase() == search // = ['Ari'] => data berupa array
                 })
-                let str = checkstudent.join() // rubah data berupa array menjadi string atau tulisan => Ari
+                let str = checkstudent.join() // rubah data berupa array menjadi string atau texs => Ari
 
                 if (checkstudent.length == 1){ // Cek banyaknya element array checkstudent == 1
                     let Absent = ["Andi"] // data absent (digunakan untuk menyimpan data absent pada hari ini) 
                     let kehadiran = Absent.filter((e)=>{ // mengecek apakah inputan sudah absent apa belum
-                        return e == str 
+                        return e == str // []
                     })
                     if (kehadiran.length == 0){ // kondisi inputan belum absent
                         Absent.push(str)    // menambahkan inputan ke data absent 

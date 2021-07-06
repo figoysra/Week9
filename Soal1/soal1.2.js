@@ -1,3 +1,4 @@
+
 const cekharikerja = (day) =>{
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
@@ -13,8 +14,12 @@ const cekharikerja = (day) =>{
         }, 3000);
     })
 }
-cekharikerja("senin").then((result)=>{
-    console.log(result)
-}).catch((error)=>{
-    console.log(error.message)
-})
+const resultharikerja = async()=>{ // mengubah function menjadi synchronous
+    try {
+        const result = await cekharikerja("senin") //menunda eksekusi hingga proses asynchronous selesai
+        console.log(result) // menampilkan hasil sesuai kondisi
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+resultharikerja()
